@@ -1,4 +1,5 @@
-import { homedir, chdir } from "./utils/common.js";
+import { changeWorkDirectory } from "./functions/changeDirectory.js";
+import { showWelcome } from "./functions/showWelcome.js";
 
-
-chdir( homedir() );
+changeWorkDirectory();
+showWelcome();
