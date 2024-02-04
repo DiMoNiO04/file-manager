@@ -8,9 +8,13 @@ import {
 import readline from 'readline';
 import { resolve } from 'path';
 import { readdir } from 'fs/promises';
+import { createHash } from 'crypto';
+import { createReadStream } from 'fs';
 
 export {
   readline,
+  createHash,
+  createReadStream,
   readdir,
   resolve,
   homedir,
