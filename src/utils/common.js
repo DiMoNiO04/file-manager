@@ -4,8 +4,10 @@ import {
   argv, cwd,
   stdin, stdout
 } from 'process';
+import readline from 'readline';
 
 export {
+  readline,
   homedir,
   chdir,
   cwd,

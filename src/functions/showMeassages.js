@@ -9,4 +9,4 @@ export {
   showGoodbye,
   showWelcome,
   showCurrentDirectory
-}
+};
