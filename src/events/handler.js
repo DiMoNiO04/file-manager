@@ -1,9 +1,12 @@
 import { showCurrentDirectory, showWelcome } from '../functions/showMeassages.js';
+import { handleCd } from '../handlers/cd.js';
 import { handleUp } from '../handlers/up.js';
 import { INVALID_INPUT } from '../utils/consts.js';
 
 export const handleEvents = (event) => {
-  switch (event) {
+  let [command, ...args] = event.split(' ');
+
+  switch (command) {
     case 'start': {
       showWelcome();
       showCurrentDirectory();
@@ -11,6 +14,10 @@ export const handleEvents = (event) => {
     }
     case 'up': {
       handleUp();
+      break;
+    }
+    case 'cd': {
+      handleCd(args);
       break;
     }
     default: {
