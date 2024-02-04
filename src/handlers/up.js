@@ -1,12 +1,4 @@
-import { ERROR_MSG } from '../utils/consts.js'
-import { showCurrentDirectory } from '../functions/showMeassages.js';
 import { chdir } from '../utils/common.js';
+import { wrapperTryCatch } from '../functions/wrapperTryCatch.js';
 
-export const handleUp = async () => {
-  try {
-    chdir('..');
-    showCurrentDirectory();
-  } catch (error) {
-    console.error(ERROR_MSG)
-  }
-}
+export const handleUp = async () => wrapperTryCatch( chdir, '..' );
