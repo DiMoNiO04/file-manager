@@ -1,12 +1,11 @@
 import { parseArgs } from "./parseArgs.js";
 
-export const showWelcome = () => {
+export const getUsername = () => {
   const args = parseArgs();
   let username = 'Username';
 
   if(args['--username']) {
     username = args['--username'];
   }
-
-  console.log(`Welcome to the File Manager, ${username}`)
+  return username;
 }
