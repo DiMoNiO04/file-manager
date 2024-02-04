@@ -1,4 +1,5 @@
 import { showCurrentDirectory, showWelcome } from '../functions/showMeassages.js';
+import { handleUp } from '../handlers/up.js';
 import { INVALID_INPUT } from '../utils/consts.js';
 
 export const handleEvents = (event) => {
@@ -9,7 +10,7 @@ export const handleEvents = (event) => {
       break;
     }
     case 'up': {
-      console.log('Вызван обработчик для команды up');
+      handleUp();
       break;
     }
     default: {

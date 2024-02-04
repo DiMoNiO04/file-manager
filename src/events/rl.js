@@ -1,4 +1,4 @@
-import { stdin, stdout, readline } from '../utils/common.js';
+import { stdin, stdout, readline, exit, nextTick } from '../utils/common.js';
 import { showCurrentDirectory, showGoodbye } from '../functions/showMeassages.js';
 import { handleEvents } from './handler.js';
 
@@ -20,6 +20,6 @@ export const actionRL = () => {
   rl.on('close', () => {
     showGoodbye();
     showCurrentDirectory();
-    process.exit(0);
+    nextTick(() => exit());
   });
 }
