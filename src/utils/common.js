@@ -1,11 +1,12 @@
 import { homedir } from 'os';
 import { 
   chdir,
-  argv
+  argv, cwd
 } from 'process';
 
 export {
   homedir,
   chdir,
-  argv
+  cwd,
+  argv,
 }
