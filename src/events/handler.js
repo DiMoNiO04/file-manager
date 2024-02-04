@@ -1,5 +1,6 @@
 import { showCurrentDirectory, showWelcome } from '../functions/showMeassages.js';
 import { handleCd } from '../handlers/cd.js';
+import { handleLs } from '../handlers/ls.js';
 import { handleUp } from '../handlers/up.js';
 import { INVALID_INPUT } from '../utils/consts.js';
 
@@ -18,6 +19,10 @@ export const handleEvents = (event) => {
     }
     case 'cd': {
       handleCd(args);
+      break;
+    }
+    case 'ls': {
+      handleLs(args);
       break;
     }
     default: {

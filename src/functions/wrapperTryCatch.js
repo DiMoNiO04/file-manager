@@ -1,14 +1,9 @@
 import { ERROR_MSG } from "../utils/consts.js";
 import { showCurrentDirectory } from "./showMeassages.js";
 
-export const wrapperTryCatch = (action, description = '') => {
+export const wrapperTryCatch = async (action, description = '') => {
   try {
-    if(description) {
-      action(description);
-    } else {
-      action();
-    };
-
+    await action(description);
     showCurrentDirectory();
   } catch (error) {
     console.error(ERROR_MSG);
