@@ -10,6 +10,7 @@ import { handleCat } from '../handlers/cat.js';
 import { handleAdd } from '../handlers/add.js';
 import { handleRename } from '../handlers/rn.js';
 import { handleCp } from '../handlers/cp.js';
+import { handleMv } from '../handlers/mv.js';
 
 export const handleEvents = (event) => {
   let [command, ...args] = event.split(' ');
@@ -42,6 +43,10 @@ export const handleEvents = (event) => {
     }
     case 'cp' : {
       handleCp( args );
+      break;
+    }
+    case 'mv' : {
+      handleMv( args );
       break;
     }
     case 'rn' : {
