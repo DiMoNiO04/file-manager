@@ -8,11 +8,11 @@ import {
   } from 'process';
 import readline from 'readline';
 import { pipeline } from 'stream/promises';
-import { resolve } from 'path';
+import { resolve, parse } from 'path';
 import { readdir } from 'fs/promises';
 import { Writable } from 'stream';
 import { createHash } from 'crypto';
-import { createReadStream } from 'fs';
+import { createReadStream, createWriteStream } from 'fs';
 import { rm, open, rename } from 'fs/promises';
 
 export {
@@ -22,7 +22,9 @@ export {
   rename,
   pipeline,
   createHash,
+  parse,
   createReadStream,
+  createWriteStream,
   userInfo,
   cpus,
   readdir,
