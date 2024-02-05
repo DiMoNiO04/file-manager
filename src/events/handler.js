@@ -1,18 +1,20 @@
 import { showCurrentDirectory, showWelcome } from '../functions/showMeassages.js';
-import { handleCd } from '../handlers/cd.js';
-import { handleDelete } from '../handlers/rm.js';
-import { handleHash } from '../handlers/hash.js';
-import { handleLs } from '../handlers/ls.js';
-import { handleUp } from '../handlers/up.js';
 import { INVALID_INPUT } from '../utils/consts.js';
-import { handleOs } from '../handlers/os.js';
-import { handleCat } from '../handlers/cat.js';
-import { handleAdd } from '../handlers/add.js';
-import { handleRename } from '../handlers/rn.js';
-import { handleCp } from '../handlers/cp.js';
-import { handleMv } from '../handlers/mv.js';
-import { handleCompress } from '../handlers/compress.js';
-import { handleDecompress } from '../handlers/decompress.js';
+import {
+  handleAdd,
+  handleCat,
+  handleCd,
+  handleCompress,
+  handleCp,
+  handleDecompress,
+  handleDelete,
+  handleHash,
+  handleLs,
+  handleMv,
+  handleOs,
+  handleRename,
+  handleUp
+} from '../handlers/index.js';
 
 export const handleEvents = (event) => {
   let [command, ...args] = event.split(' ');

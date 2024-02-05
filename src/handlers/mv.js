@@ -1,5 +1,12 @@
 import { wrapperTryCatch } from "../functions/wrapperTryCatch.js";
-import { createReadStream, createWriteStream, parse, pipeline, resolve, rm } from "../utils/common.js";
+import { 
+  createReadStream, 
+  createWriteStream, 
+  parse, 
+  pipeline, 
+  resolve, 
+  rm 
+} from "../utils/common.js";
 
 const actionHandleMv = async ( [file, newDir] ) => {
   const pathToFile = resolve( file );

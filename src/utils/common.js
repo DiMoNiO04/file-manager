@@ -1,20 +1,19 @@
 import { homedir, userInfo, cpus, EOL } from 'os';
+import readline from 'readline';
+import { pipeline } from 'stream/promises';
+import { resolve, parse } from 'path';
+import { Writable } from 'stream';
+import { createHash } from 'crypto';
+import { createReadStream, createWriteStream } from 'fs';
+import { rm, open, rename, readdir } from 'fs/promises';
+import { createBrotliCompress, createBrotliDecompress } from 'zlib';
 import { 
   chdir,
   argv, cwd,
   stdin, stdout,
   exit, nextTick,
   arch,
-  } from 'process';
-import readline from 'readline';
-import { pipeline } from 'stream/promises';
-import { resolve, parse } from 'path';
-import { readdir } from 'fs/promises';
-import { Writable } from 'stream';
-import { createHash } from 'crypto';
-import { createReadStream, createWriteStream } from 'fs';
-import { rm, open, rename } from 'fs/promises';
-import { createBrotliCompress, createBrotliDecompress } from 'zlib';
+} from 'process';
 
 export {
   readline,

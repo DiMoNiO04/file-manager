@@ -13,7 +13,6 @@ const getCpus = () => {
 }
 
 const actionHadleOs = async (event) => {
-  console.log(event)
   switch(event) {
     case '--cpus' : {
       console.table( getCpus() );

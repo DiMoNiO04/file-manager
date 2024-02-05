@@ -1,5 +1,4 @@
 import { showCurrentDirectory } from "../functions/showMeassages.js";
-import { wrapperTryCatch } from "../functions/wrapperTryCatch.js";
 import { cwd, open, resolve } from "../utils/common.js";
 import { ERROR_MSG } from "../utils/consts.js";
 

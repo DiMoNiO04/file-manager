@@ -1,5 +1,12 @@
 import { wrapperTryCatch } from "../functions/wrapperTryCatch.js";
-import { createBrotliDecompress, createReadStream, createWriteStream, parse, pipeline, resolve } from "../utils/common.js";
+import { 
+  createBrotliDecompress, 
+  createReadStream, 
+  createWriteStream, 
+  parse, 
+  pipeline, 
+  resolve 
+} from "../utils/common.js";
 
 const actionHandleDecompress = async ( [file, pathDest] ) => {
   const pathInp = resolve(file);
