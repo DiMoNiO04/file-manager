@@ -10,6 +10,7 @@ import { resolve } from 'path';
 import { readdir } from 'fs/promises';
 import { createHash } from 'crypto';
 import { createReadStream } from 'fs';
+import { rm } from 'fs/promises';
 
 export {
   readline,
@@ -22,6 +23,7 @@ export {
   cwd,
   exit,
   nextTick,
+  rm,
   stdin,
   stdout,
   argv,

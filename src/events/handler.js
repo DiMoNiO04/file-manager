@@ -1,5 +1,6 @@
 import { showCurrentDirectory, showWelcome } from '../functions/showMeassages.js';
 import { handleCd } from '../handlers/cd.js';
+import { handleDelete } from '../handlers/rm.js';
 import { handleHash } from '../handlers/hash.js';
 import { handleLs } from '../handlers/ls.js';
 import { handleUp } from '../handlers/up.js';
@@ -24,6 +25,10 @@ export const handleEvents = (event) => {
     }
     case 'ls': {
       handleLs(args);
+      break;
+    }
+    case 'rm': {
+      handleDelete(args);
       break;
     }
     case 'hash': {
