@@ -5,38 +5,43 @@ import { handleHash } from '../handlers/hash.js';
 import { handleLs } from '../handlers/ls.js';
 import { handleUp } from '../handlers/up.js';
 import { INVALID_INPUT } from '../utils/consts.js';
+import { handleOs } from '../handlers/os.js';
 
 export const handleEvents = (event) => {
   let [command, ...args] = event.split(' ');
 
   switch (command) {
-    case 'start': {
+    case 'start' : {
       showWelcome();
       showCurrentDirectory();
       break;
     }
-    case 'up': {
+    case 'up' : {
       handleUp();
       break;
     }
-    case 'cd': {
-      handleCd(args);
+    case 'cd' : {
+      handleCd( args );
       break;
     }
-    case 'ls': {
-      handleLs(args);
+    case 'ls' : {
+      handleLs( args );
       break;
     }
-    case 'rm': {
-      handleDelete(args);
+    case 'rm' : {
+      handleDelete( args );
       break;
     }
-    case 'hash': {
+    case 'os' : {
+      handleOs( args );
+      break;
+    }
+    case 'hash' : {
       handleHash(args);
       break;
     }
-    default: {
-      console.log(INVALID_INPUT);
+    default : {
+      console.log( INVALID_INPUT );
     }
   }
 }

@@ -1,9 +1,10 @@
-import { homedir } from 'os';
+import { homedir, userInfo, cpus, EOL } from 'os';
 import { 
   chdir,
   argv, cwd,
   stdin, stdout,
   exit, nextTick,
+  arch,
   } from 'process';
 import readline from 'readline';
 import { resolve } from 'path';
@@ -16,6 +17,8 @@ export {
   readline,
   createHash,
   createReadStream,
+  userInfo,
+  cpus,
   readdir,
   resolve,
   homedir,
@@ -27,4 +30,6 @@ export {
   stdin,
   stdout,
   argv,
+  arch,
+  EOL,
 }
