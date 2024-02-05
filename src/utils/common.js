@@ -7,14 +7,18 @@ import {
   arch,
   } from 'process';
 import readline from 'readline';
+import { pipeline } from 'stream/promises';
 import { resolve } from 'path';
 import { readdir } from 'fs/promises';
+import { Writable } from 'stream';
 import { createHash } from 'crypto';
 import { createReadStream } from 'fs';
 import { rm } from 'fs/promises';
 
 export {
   readline,
+  Writable,
+  pipeline,
   createHash,
   createReadStream,
   userInfo,

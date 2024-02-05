@@ -6,6 +6,7 @@ import { handleLs } from '../handlers/ls.js';
 import { handleUp } from '../handlers/up.js';
 import { INVALID_INPUT } from '../utils/consts.js';
 import { handleOs } from '../handlers/os.js';
+import { handleCat } from '../handlers/cat.js';
 
 export const handleEvents = (event) => {
   let [command, ...args] = event.split(' ');
@@ -26,6 +27,10 @@ export const handleEvents = (event) => {
     }
     case 'ls' : {
       handleLs( args );
+      break;
+    }
+    case 'cat' : {
+      handleCat( args );
       break;
     }
     case 'rm' : {
