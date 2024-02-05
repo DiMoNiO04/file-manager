@@ -13,12 +13,13 @@ import { readdir } from 'fs/promises';
 import { Writable } from 'stream';
 import { createHash } from 'crypto';
 import { createReadStream } from 'fs';
-import { rm, open } from 'fs/promises';
+import { rm, open, rename } from 'fs/promises';
 
 export {
   readline,
   Writable,
   open,
+  rename,
   pipeline,
   createHash,
   createReadStream,
