@@ -14,10 +14,13 @@ import { Writable } from 'stream';
 import { createHash } from 'crypto';
 import { createReadStream, createWriteStream } from 'fs';
 import { rm, open, rename } from 'fs/promises';
+import { createBrotliCompress, createBrotliDecompress } from 'zlib';
 
 export {
   readline,
   Writable,
+  createBrotliCompress,
+  createBrotliDecompress,
   open,
   rename,
   pipeline,

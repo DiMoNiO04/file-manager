@@ -11,6 +11,8 @@ import { handleAdd } from '../handlers/add.js';
 import { handleRename } from '../handlers/rn.js';
 import { handleCp } from '../handlers/cp.js';
 import { handleMv } from '../handlers/mv.js';
+import { handleCompress } from '../handlers/compress.js';
+import { handleDecompress } from '../handlers/decompress.js';
 
 export const handleEvents = (event) => {
   let [command, ...args] = event.split(' ');
@@ -62,7 +64,15 @@ export const handleEvents = (event) => {
       break;
     }
     case 'hash' : {
-      handleHash(args);
+      handleHash( args );
+      break;
+    }
+    case 'compress' : {
+      handleCompress( args );
+      break;
+    }
+    case 'decompress' : {
+      handleDecompress( args );
       break;
     }
     default : {
